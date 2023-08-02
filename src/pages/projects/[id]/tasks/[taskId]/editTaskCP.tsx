@@ -1,0 +1,160 @@
+import { type NextPage } from 'next';
+import { Navbar } from '~/components/Navbar';
+import styles from './editTaskCP.module.css';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Button } from '~/components/Button';
+import { api } from '~/utils/api';
+import { useRouter } from 'next/router';
+import { Team, ProgressStatus } from '@prisma/client';
+import { type SubmitHandler, useForm } from 'react-hook-form';
+import { CurrentDayCard } from '~/components/CurrentDayCard';
+
+type EditTaskInput = {
+  name: string;
+  description: string;
+  notes: string;
+  team: Team;
+  assignedToId: string;
+  deadline: Date;
+  status: ProgressStatus;
+};
+
+function EditTaskForm() {
+  const router = useRouter();
+  const projectId = router.query.id as string;
+  const taskId = router.query.taskId as string;
+  const { data: task } = api.task.get.useQuery({ id: taskId });
+  const updateTask = api.task.update.useMutation();
+  const deleteTask = api.task.delete.useMutation();
+  const { register, handleSubmit } = useForm<EditTaskInput>();
+
+  if (!task) {
+    return null;
+  }
+
+  const onSubmit: SubmitHandler<EditTaskInput> = data =>
+    updateTask.mutate(
+      { ...data, id: task.id, projectId: projectId },
+      {
+        onSuccess: () => void router.back(),
+      }
+    );
+
+  return (
+    <form
+      className={styles.createTaskFormWrapper}
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className={styles.createTaskDataWrapper}>
+        <div className={styles.createTaskDataName}>Task name</div>
+        <input type='text' className={styles.createTaskData} defaultValue={task.name} {...register('name')} />
+        <div className={styles.createTaskDataName}>Task description</div>
+        <textarea className={styles.createTaskData} defaultValue={task.description} {...register('description')} />
+        <div className={styles.createTaskDataName}>Add notes</div>
+        <textarea className={styles.createTaskData} defaultValue={task.notes} {...register('notes')} />
+
+        <div className={styles.itemsWrapper}>
+          <label className={styles.additionalGapInItems}>
+            <div className={styles.createTaskDataName}>Team</div>
+            <select className={styles.createTaskData2} defaultValue={task.team} {...register('team')}>
+              <option value={Team.ALL}>all</option>
+              <option value={Team.DESIGN}>design</option>
+              <option value={Team.BACKEND}>back-end</option>
+              <option value={Team.FRONTEND}>front-end</option>
+              <option value={Team.MANAGEMENT}>product management</option>
+            </select>
+          </label>
+
+          {/* <label className={styles.additionalGapInItems}>
+          <div className={styles.createTaskDataName}>Assign task to</div>
+          <select className={styles.createTaskData2} name="type">
+            <option value="worker1">Alex Anderson</option>
+            <option value="worker2">Kellie Sellers</option>
+            <option value="worker3">Annie Alston</option>
+            <option value="worker4">Javier Moss</option>
+            <option value="worker5">Sam Simmons</option>
+            <option value="worker6">Renae Chavez</option>
+          </select>
+        </label> */}
+        </div>
+
+        <div className={styles.itemsWrapper}>
+          <div className={styles.additionalGapInItems}>
+            <div className={styles.createTaskDataName}>Deadline date</div>
+            <input
+              type='date'
+              className={styles.createTaskData2}
+              defaultValue={task.deadline.toISOString().split('T')[0]}
+              {...register('deadline', { valueAsDate: true })}
+            />
+          </div>
+          <label className={styles.additionalGapInItems}>
+            <div className={styles.createTaskDataName}>Status</div>
+            <select className={styles.createTaskData2} defaultValue={task.status} {...register('status')}>
+              <option value={ProgressStatus.NOT_STARTED}>not started</option>
+              <option value={ProgressStatus.DONE}>done</option>
+              <option value={ProgressStatus.IN_PROGRESS}>in progress</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div className={styles.createButtWrapper}>
+        <Button text='Cancel' variant='secondary' href={`/projects/${projectId}/tasks`} />
+        <Button
+          text='Delete'
+          variant='delete'
+          onClick={() =>
+            deleteTask.mutate(
+              { id: task.id },
+              {
+                onSuccess: () => void router.back(),
+              }
+            )
+          }
+        />
+        <Button text='Submit' variant='primary' />
+      </div>
+    </form>
+  );
+}
+
+const EditTask: NextPage = () => {
+  const router = useRouter();
+  const projectId = router.query.id as string;
+
+  return (
+    <>
+      <Head>
+        <title>Edit task</title>
+        <meta name='description' content='Generated by create-t3-app' />
+        <link rel='icon' href='/favicon.ico' />
+        {/* <link
+          href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap'
+          rel='stylesheet'
+        ></link> */}
+      </Head>
+
+      <div className={styles.createTaskPageWrapper}>
+        <Navbar />
+
+        <div className={styles.createTaskWrapper}>
+          <div className={styles.createTaskHeader}>
+            <div className={styles.createTaskTextHeaderWrapper}>
+              <div className={styles.createTaskText}>Edit task</div>
+              <Link className={styles.createTaskBackText} href={`/projects/${projectId}/tasks`}>
+                &#8592; back to tasks
+              </Link>
+            </div>
+            <CurrentDayCard />
+          </div>
+
+          <EditTaskForm />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EditTask;

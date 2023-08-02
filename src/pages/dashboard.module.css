@@ -1,0 +1,93 @@
+.dashPageWrapper {
+  display: flex;
+}
+
+.dashWrapper {
+  padding: 2rem 3rem 4rem 2rem;
+  flex-grow: 1;
+}
+
+.dashText {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.dashHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.spentTimeWrapper {
+  background-color: #ffffff;
+  width: 200px;
+  height: fit-content;
+  border-radius: 8px;
+
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #000000;
+  text-align: center;
+  padding: 32px;
+}
+
+.notesWrapper {
+  /* width: 250px;
+  height: 400px; */
+  /* max-width: 240px; */
+  width: 210px;
+  height: 300px;
+
+  background: #ffffff;
+  border-radius: 8px;
+  border: none;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  align-items: center;
+}
+
+.test {
+  width: 240px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.chartWrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  padding: 20px;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+}
+
+.calendarWrapper {
+  background-color: #ffffff;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.positionTest {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}

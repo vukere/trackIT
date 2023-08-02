@@ -1,0 +1,123 @@
+.createTaskPageWrapper {
+    display: flex;
+}
+
+.createTaskWrapper {
+    padding: 2rem 3rem 4rem 2rem;
+    flex-grow: 1;
+}
+
+/* header */
+
+.createTaskText {
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.createTaskHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.createTaskHeaderDate {
+    width: 100px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #000000;
+}
+
+.createTaskBackText {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.createTaskTextHeaderWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* body */
+
+
+.createTaskDataWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.createTaskDataName {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    color: #414141;
+}
+
+.createTaskData {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+
+    box-sizing: border-box;
+    width: 700px;
+    height: fit-content;
+    background: #FFFFFF;
+    border: 1px solid #424249;
+    border-radius: 200px;
+    padding: 0.95rem 1.5rem;
+
+    
+}
+
+.createTaskData2 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    background: #FFFFFF;
+    border: 1px solid #424249;
+    border-radius: 200px;
+
+    border: 0;
+    border-right: 16px solid transparent;
+    padding: 0.95rem 1.5rem;
+    outline: 1px solid;
+}
+
+.itemsWrapper {
+    display: flex;
+    gap: 100px;
+}
+
+.additionalGapInItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+
+/* buttons */
+
+.createButtWrapper {
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 64px;
+}

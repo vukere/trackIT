@@ -1,0 +1,10 @@
+.reset {
+  /* background-color: inherit;
+  border: none;
+  outline: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit; */
+  all: unset;
+}

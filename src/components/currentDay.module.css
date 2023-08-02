@@ -1,0 +1,13 @@
+.tasksHeaderDate {
+  width: 100px;
+  height: 60px;
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 8px;
+
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #000000;
+}

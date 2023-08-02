@@ -1,0 +1,92 @@
+.profilePageWrapper {
+  display: flex;
+}
+
+.profileWrapper {
+  padding: 2rem 3rem 4rem 2rem;
+  flex-grow: 1;
+}
+
+.profileText {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.profileHeaderDate {
+  width: 100px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #000000;
+}
+
+/* body */
+
+.profileBodyWrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.profileImg {
+  width: 300px;
+  height: 350px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.imgButtWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.editProfileButton {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 150px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #202020;
+  border-radius: 200px;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  color: #000000;
+}
+
+.profileDataWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profileData {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #414141;
+}
+
+.profileDataPerson {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}

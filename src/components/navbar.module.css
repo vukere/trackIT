@@ -1,0 +1,77 @@
+.NavBar {
+  background: #4f9f9f;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 48px 48px;
+  max-width: fit-content;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.navUserWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.userImg {
+  max-width: 2rem;
+  max-height: 2rem;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-right: 16px;
+}
+
+.navPagesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.navLogo {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.userNav {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  /* white-space: nowrap; */
+}
+
+.userNavTeam {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #dedede;
+}
+
+.navPages {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.navPagesActive {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #ffffff;
+  /* text-decoration: underline #ff893b 2px;
+  text-underline-offset: 6px; */
+}
+
+.navLogOut {
+  all: unset;
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #ffffff;
+}

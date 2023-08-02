@@ -1,0 +1,92 @@
+.projectPageWrapper {
+    display: flex;
+}
+
+.projectsWrapper {
+     padding: 2rem 3rem 4rem 2rem;
+    flex-grow: 1;}
+
+.projectsText {
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.projectsHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.tasksHeaderBlocksWrapper {
+    display: flex;
+    gap: 32px;
+}
+
+.projectsHeaderDate {
+    width: 100px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #000000;
+}
+
+.workTimeCard {
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-radius: 8px; 
+}
+
+/* sort bar */
+
+.sortBarWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.sortWrapper {
+    display: flex;
+    gap: 1.5rem;
+
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.sort select{
+    border: none;
+
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* project cards */
+
+.projectCardsWrapper {
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+

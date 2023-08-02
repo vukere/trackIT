@@ -1,0 +1,246 @@
+.tasksPageWrapper {
+  display: flex;
+}
+
+.tasksWrapper {
+  padding: 2rem 3rem 4rem 2rem;
+  flex-grow: 1;
+}
+
+.tasksText {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.tasksHeaderBlocksWrapper {
+  display: flex;
+  gap: 32px;
+}
+
+.workTimeCard {
+  font-family: "Syne";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* sort bar */
+
+.sortBarWrapper {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.sortWrapper {
+  display: flex;
+  gap: 1.5rem;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.sort select {
+  border: none;
+
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.trackButt Button {
+  width: 160px;
+  text-align: center;
+  justify-content: center;
+}
+
+.trackButtWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.tasksHeaderBlocksWrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.tasksTextHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasksBackText {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+/* 
+.sectsStyles {
+    color: #636262;
+} */
+
+/* tasks sort */
+
+.myTasksHeaderBlockWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0;
+}
+
+.myTasksSortBlockWrapper .sort select {
+  background: none;
+}
+
+/* task cards */
+
+.taskCardsWrapper {
+  /* display: flex;
+    justify-content: space-between; */
+  /* padding: 2rem 0; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* track block */
+
+.trackingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trackBlockWrapper {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 16px 16px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 16px 16px;
+}
+
+.headerOptions {
+  font-family: "Montserrat";
+  font-weight: 500;
+  /* font-size: 20px; */
+  font-size: 16px;
+  color: #000000;
+}
+
+.options {
+  font-family: "Syne";
+  font-weight: 500;
+  /* font-size: 24px; */
+  font-size: 20px;
+  color: #000000;
+}
+
+.optionsTime {
+  font-family: "Montserrat";
+  font-weight: 500;
+  /* font-size: 24px; */
+  font-size: 20px;
+  color: #000000;
+}
+
+.overlayWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: fit-content;
+  /* height: 652px; */
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.timePickerHeader {
+  font-family: "Syne";
+  font-weight: 500;
+  /* font-size: 24px; */
+  font-size: 32px;
+  color: #000000;
+}
+
+.textStyles {
+  font-family: "Montserrat";
+  font-weight: 500;
+  /* font-size: 24px; */
+  font-size: 20px;
+  color: #636262;
+}
+
+.timePickerWrapper {
+  display: flex;
+  gap: 32px;
+}
+
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testTime {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  padding: 8px 16px;
+}
